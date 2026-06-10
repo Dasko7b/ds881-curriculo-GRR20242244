@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dyego | Currículo Profissional - DevOps & Software Engineer</title>
+  <meta name="description" content="Currículo Profissional de Dyego. Especialista em DevOps, Engenharia de Software, Cloud Computing e Automação de Pipelines CI/CD.">
+  
+  <!-- Fontes do Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome para Ícones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <!-- Barra de Navegação Header -->
+  <header class="navbar">
+    <div class="logo">
+      <span class="logo-accent">&lt;</span>Dyego<span class="logo-accent">.DevOps /&gt;</span>
+    </div>
+    
+    <nav class="nav-links" id="nav-links">
+      <a href="#about" class="nav-link active">Sobre</a>
+      <a href="#experience" class="nav-link">Experiência</a>
+      <a href="#education" class="nav-link">Formação</a>
+      <a href="#skills" class="nav-link">Habilidades</a>
+      <a href="#projects" class="nav-link">Projetos</a>
+      <a href="#contact" class="nav-link">Contato</a>
+    </nav>
+    
+    <div class="nav-actions">
+      <button id="theme-toggle" class="btn-icon" aria-label="Alternar tema claro/escuro">
+        <i class="fa-solid fa-moon"></i>
+      </button>
+      <button id="menu-mobile-btn" class="btn-icon mobile-only" aria-label="Abrir menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <span class="hero-badge"><i class="fa-solid fa-graduation-cap"></i> GRR20242244 - UFPR</span>
+      <h1 class="hero-title">Olá, eu sou o <span class="text-gradient">Dyego</span></h1>
+      <p class="hero-subtitle">Engenheiro DevOps & Desenvolvedor Full Stack</p>
+      <p class="hero-description">
+        Especializado em arquitetura de nuvem, conteinerização com Docker e Kubernetes, automação de infraestrutura como código (IaC) e criação de esteiras de CI/CD eficientes. Desenvolvedor focado em entregar códigos de alta qualidade e infraestruturas resilientes.
+      </p>
+      <div class="hero-buttons">
+        <a href="#contact" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i> Entre em contato</a>
+        <a href="#projects" class="btn btn-secondary"><i class="fa-solid fa-code"></i> Ver Projetos</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="avatar-card">
+        <div class="avatar-inner">
+          <i class="fa-solid fa-terminal avatar-icon"></i>
+        </div>
+        <div class="avatar-details">
+          <div class="details-row">
+            <span class="detail-label">Status:</span>
+            <span class="detail-val status-online"><i class="fa-solid fa-circle"></i> Disponível para projetos</span>
+          </div>
+          <div class="details-row">
+            <span class="detail-label">Local:</span>
+            <span class="detail-val">Curitiba - PR</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Grid Layout -->
+  <main class="container">
+    
+    <!-- Section: Sobre Mim -->
+    <section id="about" class="section card-glow animate-on-scroll">
+      <div class="section-header">
+        <div class="section-icon"><i class="fa-solid fa-user"></i></div>
+        <h2>Sobre Mim</h2>
+      </div>
+      <div class="section-body">
+        <p>
+          Atuo no desenvolvimento de soluções de software robustas com foco em governança de código, automação de testes e entrega contínua. Tenho grande interesse na cultura DevOps, buscando sempre aproximar os times de desenvolvimento e operações por meio de processos automatizados e eficientes.
+        </p>
+        <p>
+          Atualmente desenvolvendo este projeto prático para a disciplina <strong>DS881 - DevOps e Integração Contínua</strong> na UFPR, consolidando conhecimentos práticos em Docker, Docker Compose, GitHub Actions, GitHub Pages e Git Flow.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section: Experiência -->
+    <section id="experience" class="section card-glow animate-on-scroll">
+      <div class="section-header">
+        <div class="section-icon"><i class="fa-solid fa-briefcase"></i></div>
+        <h2>Experiência Profissional</h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2023 - Presente</div>
+          <div class="timeline-content">
+            <h3>DevOps Engineer Pleno</h3>
+            <span class="timeline-company">TechSolutions Cloud</span>
+            <p>Liderança técnica na implantação de pipelines de CI/CD para microsserviços. Otimização de tempos de build em 40% utilizando caching estratégico. Gerenciamento de infraestrutura na nuvem AWS via Terraform e orquestração de contêineres utilizando Kubernetes.</p>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2021 - 2023</div>
+          <div class="timeline-content">
+            <h3>Desenvolvedor Full Stack</h3>
+            <span class="timeline-company">Core Software House</span>
+            <p>Desenvolvimento de APIs REST utilizando Node.js/TypeScript e interfaces de usuário dinâmicas em React. Introdução da conteinerização no time de desenvolvimento com Docker, reduzindo em 90% os problemas de incompatibilidade de ambiente local.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Formação Acadêmica -->
+    <section id="education" class="section card-glow animate-on-scroll">
+      <div class="section-header">
+        <div class="section-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+        <h2>Formação Acadêmica</h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2024 - 2025</div>
+          <div class="timeline-content">
+            <h3>Especialização em DevOps e Engenharia de Software</h3>
+            <span class="timeline-company">Universidade Federal do Paraná (UFPR)</span>
+            <p>Foco em desenvolvimento ágil, arquitetura de sistemas escaláveis, infraestrutura como código, automação de testes e governança de TI. Atividade prática vinculada à disciplina DS881.</p>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2018 - 2022</div>
+          <div class="timeline-content">
+            <h3>Bacharelado em Análise e Desenvolvimento de Sistemas</h3>
+            <span class="timeline-company">Instituição de Ensino Superior</span>
+            <p>Formação focada em lógica de programação, banco de dados relacional e não-relacional, engenharia de requisitos e gerenciamento de projetos de software.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Habilidades -->
+    <section id="skills" class="section card-glow animate-on-scroll">
+      <div class="section-header">
+        <div class="section-icon"><i class="fa-solid fa-gears"></i></div>
+        <h2>Habilidades Técnicas</h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skills-category">
+          <h3><i class="fa-brands fa-docker text-gradient"></i> DevOps & Cloud</h3>
+          <ul class="skills-list">
+            <li>Docker & Docker Compose</li>
+            <li>Kubernetes (K8s)</li>
+            <li>GitHub Actions & GitLab CI</li>
+            <li>Terraform (IaC)</li>
+            <li>AWS / Google Cloud</li>
+            <li>Linux / Shell Scripting</li>
+          </ul>
+        </div>
+        
+        <div class="skills-category">
+          <h3><i class="fa-solid fa-code text-gradient"></i> Desenvolvimento</h3>
+          <ul class="skills-list">
+            <li>JavaScript (ES6+) / TypeScript</li>
+            <li>Node.js (Express, NestJS)</li>
+            <li>HTML5 / CSS3 / Sass</li>
+            <li>React / Vue.js</li>
+            <li>Python</li>
+            <li>Git & Git Flow</li>
+          </ul>
+        </div>
+        
+        <div class="skills-category">
+          <h3><i class="fa-solid fa-shield-halved text-gradient"></i> Governança & Qualidade</h3>
+          <ul class="skills-list">
+            <li>Conventional Commits</li>
+            <li>Jest / Cypress (Testes)</li>
+            <li>Linters (ESLint, Prettier)</li>
+            <li>SonarQube (Análise Estática)</li>
+            <li>Segurança em Pipelines (DevSecOps)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Projetos -->
+    <section id="projects" class="section card-glow animate-on-scroll">
+      <div class="section-header">
+        <div class="section-icon"><i class="fa-solid fa-diagram-project"></i></div>
+        <h2>Projetos Destacados</h2>
+      </div>
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-header">
+            <span class="project-type">DevOps / CI/CD</span>
+            <h3>ds881-curriculo-GRR20242244</h3>
+          </div>
+          <p class="project-description">
+            Currículo online automatizado integrado com GitHub Pages. Possui ambiente de desenvolvimento Docker conteinerizado e pipeline CI/CD robusta com validação por linter, testes e deploy automático.
+          </p>
+          <div class="project-tags">
+            <span>Docker</span>
+            <span>GitHub Actions</span>
+            <span>Vite</span>
+            <span>ESLint</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/Dasko7b/ds881-curriculo-GRR20242244" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Código</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <span class="project-type">Infrastructure as Code</span>
+            <h3>AWS-IaC-Cluster</h3>
+          </div>
+          <p class="project-description">
+            Cluster EKS (Elastic Kubernetes Service) resiliente provisionado de forma automatizada na AWS utilizando Terraform. Configurações de redes VPC, Subnets e instâncias EC2 auto-escaláveis.
+          </p>
+          <div class="project-tags">
+            <span>Terraform</span>
+            <span>AWS</span>
+            <span>EKS</span>
+            <span>Kubernetes</span>
+          </div>
+          <div class="project-links">
+            <span class="badge-repo"><i class="fa-solid fa-lock"></i> Interno</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Contato -->
+    <section id="contact" class="section card-glow animate-on-scroll">
+      <div class="section-header">
+        <div class="section-icon"><i class="fa-solid fa-envelope"></i></div>
+        <h2>Contato</h2>
+      </div>
+      <div class="contact-layout">
+        <div class="contact-info">
+          <p>Sinta-se à vontade para se conectar comigo através das redes sociais ou enviando um e-mail.</p>
+          <div class="contact-methods">
+            <div class="contact-method">
+              <i class="fa-solid fa-envelope text-gradient"></i>
+              <div>
+                <h4>E-mail</h4>
+                <a href="mailto:dyego@example.com">dyego@example.com</a>
+              </div>
+            </div>
+            <div class="contact-method">
+              <i class="fa-brands fa-github text-gradient"></i>
+              <div>
+                <h4>GitHub</h4>
+                <a href="https://github.com/Dasko7b" target="_blank" rel="noopener noreferrer">github.com/Dasko7b</a>
+              </div>
+            </div>
+            <div class="contact-method">
+              <i class="fa-brands fa-linkedin text-gradient"></i>
+              <div>
+                <h4>LinkedIn</h4>
+                <a href="https://linkedin.com/in/dyego-exemplo" target="_blank" rel="noopener noreferrer">linkedin.com/in/dyego</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form-container">
+          <form id="contact-form" class="contact-form">
+            <div class="form-group">
+              <label for="form-name">Nome</label>
+              <input type="text" id="form-name" required placeholder="Seu nome">
+            </div>
+            <div class="form-group">
+              <label for="form-email">E-mail</label>
+              <input type="email" id="form-email" required placeholder="seu.email@exemplo.com">
+            </div>
+            <div class="form-group">
+              <label for="form-message">Mensagem</label>
+              <textarea id="form-message" rows="4" required placeholder="Olá! Gostaria de conversar sobre um projeto..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Enviar Mensagem <i class="fa-solid fa-paper-plane"></i></button>
+            <div id="form-feedback" class="form-feedback hidden"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <p>&copy; 2026 Dyego. Todos os direitos reservados.</p>
+      <p>Desenvolvido com HTML, CSS e Vite. Executado em Docker.</p>
+    </div>
+  </footer>
+
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
