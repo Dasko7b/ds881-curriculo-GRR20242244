@@ -4,7 +4,7 @@ Este repositório contém a implementação do meu currículo profissional desen
 
 ## 🚀 Link do Projeto em Produção
 O currículo está publicado e disponível no link abaixo:
-👉 - https://dasko7b.github.io/ds881-curriculo-GRR20242244/
+👉 https://dasko7b.github.io/ds881-curriculo-GRR20242244/
 
 ---
 
