@@ -94,8 +94,8 @@ A automação está descrita em [.github/workflows/main.yml](.github/workflows/m
 ---
 
 ## 📸 Comprovação de Branch Protection
-Abaixo está o print comprovando a configuração da regra de proteção da branch `main` no GitHub (salve seu print com o nome `branch-protection.png` na raiz do projeto):
+Abaixo está o print comprovando a configuração da regra de proteção da branch `main` no GitHub:
 
-![Comprovação de Branch Protection](PR.png)
-![Comprovação de Branch Protection](lint-and-build.png)
-![Comprovação de Branch Protection](bypass.png)
+![Comprovação de Branch Protection](assets/PR.png)
+![Comprovação de Branch Protection](assets/lint-and-build.png)
+![Comprovação de Branch Protection](assets/bypass.png)
