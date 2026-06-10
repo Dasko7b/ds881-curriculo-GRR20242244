@@ -1,70 +1,92 @@
 # Projeto Individual: Currículo Online DS881
 
-Este repositório é um **template** para a atividade prática individual da disciplina DS881. O objetivo é aplicar conceitos de conteinerização, automação de pipeline CI/CD e governança de código em um cenário de projeto real (seu currículo ou portfólio profissional).
+Este repositório contém a implementação do meu currículo profissional desenvolvido como atividade prática da disciplina **DS881 - DevOps e Integração Contínua** (UFPR).
 
-## Instruções para Início
-
-Para iniciar o seu trabalho, siga estes passos:
-
-1. Clique no botão verde **"Use this template"** e selecione **"Create a new repository"**.
-2. Nomeie o repositório como `ds881-curriculo-GRR99999999`.
-3. Certifique-se de que a visibilidade seja **Public**.
-4. Configure a proteção da branch `main` imediatamente (instruções na seção 2.2).
+## 🚀 Link do Projeto em Produção
+O currículo está publicado e disponível no link abaixo:
+👉 **[Currículo Online - Dyego](https://dasko7b.github.io/ds881-curriculo-GRR20242244/)**
 
 ---
 
-## 1. Objetivo
-Desenvolver e publicar um currículo profissional ou portfólio pessoal utilizando o GitHub Pages. O projeto deve demonstrar o domínio de ferramentas de conteinerização, automação de pipeline CI/CD e governança de código via fluxos de trabalho estruturados, mesmo em um ambiente de desenvolvimento individual.
-
-## 2. Requisitos Técnicos
-
-### 2.1. Tecnologia e Stack
-* **Aplicação:** O site deve ser estático. É livre a escolha entre HTML/CSS puro ou o uso de geradores de site estático (SSG) como Astro, Hugo ou Jekyll.
-* **Hospedagem:** O deploy final deve ser realizado obrigatoriamente no GitHub Pages.
-
-### 2.2. Conteinerização do Ambiente de Desenvolvimento (Docker)
-O repositório deve fornecer a infraestrutura necessária para que o projeto possa ser editado e testado localmente sem a exigência de instalar as linguagens ou dependências base (como Node.js ou Ruby) no sistema operacional do hospedeiro.
-* **Dockerfile:** Deve especificar uma imagem base adequada (ex: `node:alpine` ou `ruby:alpine`) e preparar o ambiente com as ferramentas necessárias para executar o gerador de site estático escolhido.
-* **Docker Compose (`docker-compose.yml`):** Deve ser configurado para iniciar o servidor de desenvolvimento nativo da ferramenta (ex: `vite dev`, `jekyll serve` ou `hugo server`).
-* **Mapeamento de Volumes (Bind Mounts):** A configuração do Compose deve mapear o diretório local do código-fonte para o diretório de trabalho dentro do contêiner. Isso é obrigatório para garantir o funcionamento do *hot reload* (atualização automática no navegador ao salvar um arquivo).
-* **Portas:** O servidor de desenvolvimento dentro do contêiner deve ser mapeado para responder na porta `8080` do localhost da máquina hospedeira.
-
-### 2.3. Workflow de Git e Governança
-Apesar de ser um projeto individual, o projeto deve seguir as boas prática do desenvolvimento com git:
-* **Proteção de Branch:** A branch `main` deve estar configurada como protegida nas configurações do repositório.
-* **Fluxo de Trabalho:** É proibido realizar *push* direto na `main`. Toda alteração deve ser feita em uma branch secundária (ex: `feat/nome-da-feature`) e integrada via **Pull Request (PR)**.
-* **Critérios de Merge:** O merge para a `main` só deve ser permitido se o pipeline de CI estiver com status "verde" (sucesso).
-* **Mensagens de Commit:** Devem seguir o padrão *Conventional Commits* (ex: `feat:`, `fix:`, `ci:`, `docs:`).
-
-### 2.4. CI/CD (GitHub Actions)
-Implementação de um workflow automatizado (`.github/workflows/main.yml`) contendo:
-1.  **Linter/Static Analysis:** Verificação de sintaxe e padrões de código.
-2.  **Build:** Validação de que a aplicação compila corretamente dentro do ambiente de CI.
-3.  **Deploy:** Publicação automatizada no GitHub Pages disparada após o merge na branch `main`.
-
-## 3. Documentação
-O arquivo `README.md` deve conter:
-1.  Link público do currículo em produção.
-2.  Instruções detalhadas para execução do ambiente local via Docker.
-3.  Prints ou descrição da configuração de proteção da branch `main` aplicada no GitHub.
-
-## 4. Critérios de Avaliação
-
-| Item | Peso |
-| :--- | :--- |
-| Configuração correta de Docker (Dockerfile e Compose) | 30% |
-| Pipeline de CI/CD funcional (Lint, Build e Deploy) | 30% |
-| Evidência de uso de Pull Requests e Branch Protection | 20% |
-| Qualidade da documentação e histórico de commits | 10% |
-| Funcionamento da aplicação no GitHub Pages | 10% |
-
+## 🛠️ Stack Tecnológica
+* **Frontend:** HTML5 (estrutura semântica), CSS3 (estilização moderna e responsiva com variáveis CSS, suporte a temas claro/escuro e glassmorphism) e JavaScript Vanilla.
+* **Ferramenta de Build:** [Vite](https://vitejs.dev/) (para empacotamento ágil e suporte nativo a *Hot Module Replacement* / *Hot Reload*).
+* **Conteinerização:** Docker e Docker Compose.
+* **CI/CD:** GitHub Actions (validação estática com ESLint, teste de build e deploy automático para GitHub Pages).
 
 ---
 
-## 5. Entrega e Avaliação
+## 🐳 Instruções para Execução do Ambiente Local via Docker
 
-A entrega deve ser realizada através do formulário disponibilizado pelo professor, contendo o link do seu repositório público.
+O ambiente está configurado para que o projeto possa ser editado e testado localmente sem a exigência de instalar linguagens ou dependências base no sistema operacional da máquina hospedeira.
+
+### Pré-requisitos
+* Ter o **Docker** e o **Docker Compose** instalados na sua máquina.
+
+### Como Executar
+
+1. **Clonar o Repositório:**
+   ```bash
+   git clone https://github.com/Dasko7b/ds881-curriculo-GRR20242244.git
+   cd ds881-curriculo-GRR20242244
+   ```
+
+2. **Iniciar o Contêiner:**
+   Execute o comando abaixo para construir a imagem (caso seja a primeira execução) e subir o servidor de desenvolvimento:
+   ```bash
+   docker compose up --build
+   ```
+   *Nota:* Se estiver em versões mais antigas do docker, use `docker-compose up --build`.
+
+3. **Acessar a Aplicação:**
+   Abra seu navegador e acesse:
+   👉 **[http://localhost:8080](http://localhost:8080)**
+
+4. **Hot Reload (Atualização Automática):**
+   Com o contêiner rodando, qualquer alteração salva nos arquivos `index.html`, `style.css` ou `main.js` será atualizada e refletida automaticamente no navegador instantaneamente devido ao mapeamento de volume local configurado no `docker-compose.yml` e o recurso de polling do Vite.
+
+5. **Parar o Servidor:**
+   Para finalizar o serviço, basta pressionar `Ctrl + C` no terminal onde o compose está rodando ou executar em outro terminal:
+   ```bash
+   docker compose down
+   ```
 
 ---
 
-> **Atenção:** Não esqueça de anexar no final deste README ou na documentação do projeto um print comprovando que a regra de **Branch Protection** da `main` foi configurada no GitHub.
+## ⚙️ Configuração de Governança de Git e Proteção de Branch (`main`)
+
+Para assegurar a integridade do código em produção, foi configurada a regra de **Branch Protection** diretamente no repositório do GitHub com as seguintes diretrizes:
+
+### Passo a Passo da Configuração no GitHub:
+1. No repositório, acesse a aba **Settings** (Configurações).
+2. No menu lateral esquerdo, clique em **Branches**.
+3. Na seção **Branch protection rules**, clique em **Add branch protection rule** (ou edite a regra para `main`).
+4. No campo **Branch name pattern**, insira `main`.
+5. Marque as seguintes opções:
+   * **[x] Require a pull request before merging:**
+     * **[x] Require approvals:** Define o fluxo de revisão antes de aceitar código na branch principal.
+   * **[x] Require status checks to pass before merging:**
+     * Pesquise e adicione o status check: `lint-and-build` (garantindo que o pipeline de linter e compilação do Actions deve estar verde para liberar o merge).
+   * **[x] Do not allow bypassing the above settings:** Aplica as regras mesmo para administradores do repositório.
+6. Clique em **Save changes** no final da página.
+
+### Descrição Visual da Regra Ativa:
+> A branch `main` está protegida contra commits diretos (`git push origin main` falhará). Qualquer alteração deve seguir o fluxo de criação de uma branch de feature (ex: `feat/nome-da-feature`), abertura de um **Pull Request (PR)**, aprovação e execução bem-sucedida de todas as verificações do pipeline de CI antes de poder ser mesclada (*merged*).
+
+*(O print da tela de configurações com as regras ativas deve ser anexado abaixo caso necessário pelo fluxo de entrega)*
+
+---
+
+## 🧪 Pipeline de CI/CD (GitHub Actions)
+
+A automação está descrita em [.github/workflows/main.yml](.github/workflows/main.yml) e é dividida em dois jobs principais:
+
+1. **Lint and Build (`lint-and-build`):**
+   * Disparado em qualquer *push* ou *pull request* direcionado à branch `main`.
+   * Realiza a checagem sintática do JavaScript via `ESLint` (`npm run lint`).
+   * Valida se a aplicação compila corretamente para produção com o Vite (`npm run build`).
+   * Se for uma execução na branch `main` após um merge, empacota os arquivos gerados em `dist/` e faz o upload do artefato.
+
+2. **Deploy (`deploy`):**
+   * Disparado exclusivamente após o sucesso do job de `lint-and-build` na branch `main`.
+   * Realiza a publicação no GitHub Pages de forma automatizada e segura sem a necessidade de chaves extras (`deploy-pages`).
