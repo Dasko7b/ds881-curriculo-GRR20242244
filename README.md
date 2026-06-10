@@ -90,3 +90,12 @@ A automação está descrita em [.github/workflows/main.yml](.github/workflows/m
 2. **Deploy (`deploy`):**
    * Disparado exclusivamente após o sucesso do job de `lint-and-build` na branch `main`.
    * Realiza a publicação no GitHub Pages de forma automatizada e segura sem a necessidade de chaves extras (`deploy-pages`).
+
+---
+
+## 📸 Comprovação de Branch Protection
+Abaixo está o print comprovando a configuração da regra de proteção da branch `main` no GitHub:
+
+![Comprovação de Branch Protection](assets/PR.png)
+![Comprovação de Branch Protection](assets/lint-and-build.png)
+![Comprovação de Branch Protection](assets/bypass.png)
