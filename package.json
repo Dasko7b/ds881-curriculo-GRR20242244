@@ -1,0 +1,16 @@
+{
+  "name": "ds881-curriculo-grr20242244",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0 --port 8080",
+    "build": "vite build",
+    "preview": "vite preview --port 8080",
+    "lint": "eslint \"**/*.js\""
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "vite": "^5.2.11"
+  }
+}
